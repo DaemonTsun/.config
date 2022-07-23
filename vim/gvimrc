@@ -1,0 +1,13 @@
+
+set number
+set cursorline
+set guioptions-=m
+set guioptions-=T
+
+set guifont=Iosevka\ SS02\ Light\ 14
+
+colorscheme summerfruit
+
+highlight IndentGuidesOdd  guibg=#FCFCFC
+highlight IndentGuidesEven guibg=#F6F6F6
+highlight VisualNOS gui=none ctermbg=7 guibg=#D0D0D0

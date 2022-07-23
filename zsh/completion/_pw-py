@@ -1,0 +1,14 @@
+#compdef _pw-py pw-py
+
+function _pw-py()
+{
+    local line
+
+    _arguments -C \
+        "1: :($(pw-py -l))" \
+        "*::arg:->args"
+
+    if [ x"$line" != x"" ]; then
+        _arguments "1: :($(pw-py -l $line[1]))"
+    fi
+}

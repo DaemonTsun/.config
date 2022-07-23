@@ -1,0 +1,16 @@
+#compdef _pw-old pw-old
+
+function _pw-old()
+{
+    local line
+
+    _arguments -C \
+        "1: :($(pw-old -1))" \
+        "*::arg:->args"
+
+    if [ x"$line" != x"" ]; then
+        _arguments "1: :($(pw-old -2 $line[1]))"
+    fi
+
+    # _arguments "1: :($(cat ~/.local/share/.pwlist))"
+}
