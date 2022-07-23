@@ -280,8 +280,8 @@ call <sid>hi("StartifySlash",    s:gray, "", s:cterm03, "", "", "")
 call <sid>hi("StartifySpecial",  s:gray, "", s:cterm03, "", "", "")
 
 " nvim
-call <sid>hi("TabLineFill",  s:black, s:white, s:white, "", "none", "")
-call <sid>hi("TabLine",  s:black, s:brightpink, s:white, "", "none", "")
+call <sid>hi("TabLineFill",  s:gui07, s:white, s:white, "", "none", "")
+call <sid>hi("TabLine",  s:gui07, s:lightestgray, s:white, "", "none", "")
 call <sid>hi("TabLineSel",  s:black, s:white, s:white, "", "standout", "")
 
 " Remove functions
