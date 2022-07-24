@@ -1,13 +1,16 @@
+set mouse=a
 set number
 set cursorline
+set inccommand=nosplit " really not a fan of this
 
 GuiTabline 0
 GuiScrollBar 1
 
 colorscheme nvim-summerfruit
 
+" TODO: save font settings to file and autoload / save
 let s:font = "Iosevka SS02"
-let s:fontsize = 13
+let s:fontsize = 15
 let s:fontweight = 25
 
 function! AdjustFontSize(amount)

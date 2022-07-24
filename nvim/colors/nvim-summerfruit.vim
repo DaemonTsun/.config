@@ -3,16 +3,16 @@
 " GUI color definitions
 let s:brightpink   = "FFE7FF"
 let s:blue		   = "0000FF"
-let s:lightblue	   = "AAAAFF"
+let s:highlightblue	   = "E0E0FF"
 let s:lightestgray = "EEEEEE"
 let s:white        = "FFFFFF"
 let s:lightergray  = "E0E0E0"
 let s:lightgray    = "D0D0D0"
 let s:gray         = "B0B0B0"
 let s:black        = "000000"
-let s:gui05        = "101010"
+let s:textblack        = "101010"
 let s:gui06        = "151515"
-let s:gui07        = "202020"
+let s:textsecondary        = "202020"
 let s:gui08        = "FF0086"
 let s:orange        = "FD8900"
 let s:mustard      = "ABA800"
@@ -77,7 +77,7 @@ fun! <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
 endfun
 
 " Vim editor colors
-call <sid>hi("Normal",        s:gui05, s:white, s:cterm05, s:cterm00, "", "")
+call <sid>hi("Normal",        s:textblack, s:white, s:cterm05, s:cterm00, "", "")
 call <sid>hi("Bold",          "", "", "", "", "bold", "")
 call <sid>hi("Debug",         s:gui08, "", s:cterm08, "", "", "")
 call <sid>hi("Directory",     s:gui0D, "", s:cterm0D, "", "", "")
@@ -92,7 +92,7 @@ call <sid>hi("MatchParen",    "", s:gray, "", s:cterm03,  "", "")
 call <sid>hi("ModeMsg",       s:black, "", s:cterm0B, "", "", "")
 call <sid>hi("MoreMsg",       s:black, "", s:cterm0B, "", "", "")
 call <sid>hi("Question",      s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("Search",        s:white, s:lightblue, s:cterm01, s:cterm0A,  "", "")
+call <sid>hi("Search",        s:textblack, s:highlightblue, s:cterm01, s:cterm0A,  "", "")
 call <sid>hi("IncSearch",     s:white, s:orange, s:cterm01, s:cterm09, "none", "")
 call <sid>hi("Substitute",    s:white, s:mustard, s:cterm01, s:cterm0A, "none", "")
 call <sid>hi("SpecialKey",    s:gray, "", s:cterm03, "", "", "")
@@ -104,7 +104,7 @@ call <sid>hi("WarningMsg",    s:gui08, "", s:cterm08, "", "", "")
 call <sid>hi("WildMenu",      s:gui08, s:mustard, s:cterm08, "", "", "")
 call <sid>hi("Title",         s:gui0D, "", s:cterm0D, "", "none", "")
 call <sid>hi("Conceal",       s:gui0D, s:white, s:cterm0D, s:cterm00, "", "")
-call <sid>hi("Cursor",        s:white, s:gui05, s:cterm00, s:cterm05, "", "")
+call <sid>hi("Cursor",        s:white, s:textblack, s:cterm00, s:cterm05, "", "")
 call <sid>hi("NonText",       s:gray, "", s:cterm03, "", "", "")
 call <sid>hi("LineNr",        s:gray, s:white, s:cterm03, s:cterm01, "", "")
 call <sid>hi("SignColumn",    s:gray, s:lightergray, s:cterm03, s:cterm01, "", "")
@@ -116,8 +116,8 @@ call <sid>hi("CursorColumn",  "", s:lightergray, "", s:cterm01, "none", "")
 call <sid>hi("CursorLine",    "", s:lightestgray, "", s:cterm01, "none", "")
 call <sid>hi("CursorLineNr",  s:black, s:lightergray, s:cterm04, s:cterm01, "", "")
 call <sid>hi("QuickFixLine",  "", s:lightergray, "", s:cterm01, "none", "")
-call <sid>hi("PMenu",         s:gui05, s:lightergray, s:cterm05, s:cterm01, "none", "")
-call <sid>hi("PMenuSel",      s:lightergray, s:gui05, s:cterm01, s:cterm05, "", "")
+call <sid>hi("PMenu",         s:textblack, s:lightergray, s:cterm05, s:cterm01, "none", "")
+call <sid>hi("PMenuSel",      s:lightergray, s:textblack, s:cterm01, s:cterm05, "", "")
 
 " Standard syntax highlighting
 call <sid>hi("Boolean",      s:orange, "", s:cterm09, "", "", "")
@@ -158,7 +158,7 @@ call <sid>hi("cOperator",   s:gui0C, "", s:cterm0C, "", "", "")
 call <sid>hi("cPreCondit",  s:gui0E, "", s:cterm0E, "", "", "")
 
 " CSS highlighting
-call <sid>hi("cssBraces",      s:gui05, "", s:cterm05, "", "", "")
+call <sid>hi("cssBraces",      s:textblack, "", s:cterm05, "", "", "")
 call <sid>hi("cssClassName",   s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("cssColor",       s:gui0C, "", s:cterm0C, "", "", "")
 
@@ -193,12 +193,12 @@ call <sid>hi("gitcommitSelectedFile",   s:gui0B, "", s:cterm0B, "", "bold", "")
 " HTML highlighting
 call <sid>hi("htmlBold",    s:mustard, "", s:cterm0A, "", "", "")
 call <sid>hi("htmlItalic",  s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("htmlEndTag",  s:gui05, "", s:cterm05, "", "", "")
-call <sid>hi("htmlTag",     s:gui05, "", s:cterm05, "", "", "")
+call <sid>hi("htmlEndTag",  s:textblack, "", s:cterm05, "", "", "")
+call <sid>hi("htmlTag",     s:textblack, "", s:cterm05, "", "", "")
 
 " JavaScript highlighting
-call <sid>hi("javaScript",        s:gui05, "", s:cterm05, "", "", "")
-call <sid>hi("javaScriptBraces",  s:gui05, "", s:cterm05, "", "", "")
+call <sid>hi("javaScript",        s:textblack, "", s:cterm05, "", "", "")
+call <sid>hi("javaScriptBraces",  s:textblack, "", s:cterm05, "", "", "")
 call <sid>hi("javaScriptNumber",  s:orange, "", s:cterm09, "", "", "")
 " pangloss/vim-javascript highlighting
 call <sid>hi("jsOperator",          s:gui0D, "", s:cterm0D, "", "", "")
@@ -229,18 +229,18 @@ call <sid>hi("mailEmail",    s:gui0D, "", s:cterm0D, "", "", "")
 
 " Markdown highlighting
 call <sid>hi("markdownCode",              s:gui0B, "", s:cterm0B, "", "", "")
-call <sid>hi("markdownError",             s:gui05, s:white, s:cterm05, s:cterm00, "", "")
+call <sid>hi("markdownError",             s:textblack, s:white, s:cterm05, s:cterm00, "", "")
 call <sid>hi("markdownCodeBlock",         s:gui0B, "", s:cterm0B, "", "", "")
 call <sid>hi("markdownHeadingDelimiter",  s:gui0D, "", s:cterm0D, "", "", "")
 
 " NERDTree highlighting
 call <sid>hi("NERDTreeDirSlash",  s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("NERDTreeExecFile",  s:gui05, "", s:cterm05, "", "", "")
+call <sid>hi("NERDTreeExecFile",  s:textblack, "", s:cterm05, "", "", "")
 
 " PHP highlighting
-call <sid>hi("phpMemberSelector",  s:gui05, "", s:cterm05, "", "", "")
-call <sid>hi("phpComparison",      s:gui05, "", s:cterm05, "", "", "")
-call <sid>hi("phpParent",          s:gui05, "", s:cterm05, "", "", "")
+call <sid>hi("phpMemberSelector",  s:textblack, "", s:cterm05, "", "", "")
+call <sid>hi("phpComparison",      s:textblack, "", s:cterm05, "", "", "")
+call <sid>hi("phpParent",          s:textblack, "", s:cterm05, "", "", "")
 
 " Python highlighting
 call <sid>hi("pythonOperator",  s:gui0E, "", s:cterm0E, "", "", "")
@@ -269,7 +269,7 @@ call <sid>hi("SpellRare",    "", "", "", "", "undercurl", s:gui0E)
 
 " Startify highlighting
 call <sid>hi("StartifyBracket",  s:gray, "", s:cterm03, "", "", "")
-call <sid>hi("StartifyFile",     s:gui07, "", s:cterm07, "", "", "")
+call <sid>hi("StartifyFile",     s:textsecondary, "", s:cterm07, "", "", "")
 call <sid>hi("StartifyFooter",   s:gray, "", s:cterm03, "", "", "")
 call <sid>hi("StartifyHeader",   s:gui0B, "", s:cterm0B, "", "", "")
 call <sid>hi("StartifyNumber",   s:orange, "", s:cterm09, "", "", "")
@@ -280,13 +280,13 @@ call <sid>hi("StartifySlash",    s:gray, "", s:cterm03, "", "", "")
 call <sid>hi("StartifySpecial",  s:gray, "", s:cterm03, "", "", "")
 
 " nvim
-call <sid>hi("TabLineFill",  s:gui07, s:white, s:white, "", "none", "")
-call <sid>hi("TabLine",  s:gui07, s:lightestgray, s:white, "", "none", "")
+call <sid>hi("TabLineFill",  s:textsecondary, s:white, s:white, "", "none", "")
+call <sid>hi("TabLine",  s:textsecondary, s:lightestgray, s:white, "", "none", "")
 call <sid>hi("TabLineSel",  s:black, s:white, s:white, "", "standout", "")
 
 " Remove functions
 delf <sid>hi
 
 " Remove color variables
-unlet s:white s:lightergray s:lightgray s:gray  s:black  s:gui05  s:gui06  s:gui07  s:gui08  s:orange s:mustard  s:gui0B  s:gui0C  s:gui0D  s:gui0E  s:gui0F
+unlet s:white s:lightergray s:lightgray s:gray  s:black  s:textblack  s:gui06  s:textsecondary  s:gui08  s:orange s:mustard  s:gui0B  s:gui0C  s:gui0D  s:gui0E  s:gui0F
 unlet s:cterm00 s:cterm01 s:cterm02 s:cterm03 s:cterm04 s:cterm05 s:cterm06 s:cterm07 s:cterm08 s:cterm09 s:cterm0A s:cterm0B s:cterm0C s:cterm0D s:cterm0E s:cterm0F
