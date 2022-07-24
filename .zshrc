@@ -1,4 +1,5 @@
-export ZSH="/home/user/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+export ZSH_CONFIG="$HOME/.config/zsh"
 
 fpath=(~/.config/zsh/completion ~/.config/zsh/functions $fpath)
 ZSH_THEME="robbyrussell"
@@ -7,6 +8,7 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source $ZSH_CONFIG/private
 
 compinit
 
