@@ -1,10 +1,8 @@
-set runtimepath^=~/.config/vim runtimepath+=~/.config/vim/after
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vim/vimrc
 
-nnoremap <C-t> :tabnew<CR>
-inoremap <C-t> <ESC>:tabnew<CR>
-
+" tab swapping with alt
 nnoremap <A-1> 1gt
 nnoremap <A-2> 2gt
 nnoremap <A-3> 3gt
@@ -23,3 +21,6 @@ inoremap <A-6> <ESC>6gt
 inoremap <A-7> <ESC>7gt
 inoremap <A-8> <ESC>8gt
 inoremap <A-9> <ESC>9gt
+
+nnoremap <C-w> :q<CR>
+inoremap <C-w> <ESC>:q<CR>
