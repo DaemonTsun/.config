@@ -46,9 +46,5 @@ fu! SourceHeaderSwap()
     let current_word = expand("<cword>")
     execute 'edit' fname . '.' . swap_ext
 
-    let ln = search(current_word)
-
-    if ln > -1
-        execute ln
-    endif
+    let w = search(current_word)
 endfunction
