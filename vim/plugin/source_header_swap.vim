@@ -1,9 +1,8 @@
 " source_header_swap.vim - swap between header and source files
 " Maintainer:   DaemonTsun
-" Version:      1.1
+" Version:      1.3
 
-fu! SourceHeaderSwap()
-    " TODO: make this smarter, e.g. see if files exist
+function! SourceHeaderSwap(...)
     let fname=expand('%:r') 
     let ext=expand('%:e')
     let is_cpp = 0
@@ -44,7 +43,14 @@ fu! SourceHeaderSwap()
     endif
 
     let current_word = expand("<cword>")
-    execute 'edit' fname . '.' . swap_ext
+    let do_search = get(a:, 0, 0)
 
-    let w = search(current_word)
+    try
+        execute 'edit' fname . '.' . swap_ext
+
+        if exists("current_word") && do_search
+            let w = search(current_word)
+        endif
+    endtry
+
 endfunction

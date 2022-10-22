@@ -43,7 +43,7 @@ filetype plugin indent on
 " Commands
 command! W :w
 command! Q :q
-command! -nargs=* Sp :tabnew <args>
+command! -nargs=* -complete=file Sp :tabnew <args>
 
 " Mappings
 nmap <F1> <nop>
@@ -53,6 +53,7 @@ nnoremap <F5> :make!<cr>
 nnoremap <F6> :!make run<cr>
 
 nnoremap <F4> :call SourceHeaderSwap()<cr>
+nnoremap <S-F4> :call SourceHeaderSwap(1)<cr>
 
 nnoremap <C-t> :tabnew<CR>
 inoremap <C-t> <ESC>:tabnew<CR>
