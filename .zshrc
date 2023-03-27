@@ -8,7 +8,10 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source $ZSH_CONFIG/private
+
+if [ -f "$ZSH_CONFIG/private" ]; then
+    source $ZSH_CONFIG/private
+fi
 
 compinit
 
@@ -16,7 +19,9 @@ compinit
 zstyle ':completion:*' menu select=2
 
 alias bc='bc -lq'
-alias news='newsboat'
+alias news='nohup quiterss&'
 alias curltor='curl -L -C - --retry 999 --retry-max-time 60 --proxy socks5://localhost:9050'
 
 alias qvim='nvim-qt'
+
+alias gsuir='git submodule update --init --recursive'
