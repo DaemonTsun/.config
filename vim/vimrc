@@ -25,17 +25,8 @@ if has('persistent_undo')
   set undodir=$HOME/.vim/undo
 endif     
 
-" Netrw settings
-let g:netrw_banner = 0
-"let g:netrw_browse_split = 1
-let g:netrw_winsize = 20
-let g:netrw_liststyle = 3
-let g:netrw_altv = 1
-
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
-
-autocmd FileType netrw setl bufhidden=delete
 
 " Plugins
 filetype plugin indent on
@@ -48,14 +39,28 @@ command! -nargs=* -complete=file Sp :tabnew <args>
 " Mappings
 nmap <F1> <nop>
 imap <F1> <nop>
-nnoremap <F3> :Lex<cr>
+nnoremap <F3> :call GoToDefinitionOfCurrentWord()<cr>zz
+nnoremap <S-F3> :call GoToDefinitionOfCurrentWord(1)<cr>zz
 nnoremap <F5> :make!<cr>
 nnoremap <F6> :!make run<cr>
 
 nnoremap <F4> :call SourceHeaderSwap()<cr>
 nnoremap <S-F4> :call SourceHeaderSwap(1)<cr>
+nnoremap <silent> z. :<C-u>normal! zszH<cr>
 
-nnoremap <C-t> :tabnew<CR>
-inoremap <C-t> <ESC>:tabnew<CR>
+nnoremap <C-t> :tabnew<cr>
+inoremap <C-t> <ESC>:tabnew<cr>
 
-" execute pathogen#infect()
+nnoremap <S-Up> <nop>
+nnoremap <S-Down> <nop>
+nnoremap <S-Left> <nop>
+nnoremap <S-Right> <nop>
+vnoremap <S-Up> <nop>
+vnoremap <S-Down> <nop>
+vnoremap <S-Left> <nop>
+vnoremap <S-Right> <nop>
+inoremap <S-Up> <nop>
+inoremap <S-Down> <nop>
+inoremap <S-Left> <nop>
+inoremap <S-Right> <nop>
+
