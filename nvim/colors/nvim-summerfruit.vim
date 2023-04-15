@@ -9,6 +9,7 @@ let s:white        = "FFFFFF"
 let s:lightergray  = "E0E0E0"
 let s:lightgray    = "D0D0D0"
 let s:gray         = "B0B0B0"
+let s:darkgray     = "909090"
 let s:black        = "000000"
 let s:textblack    = "101010"
 let s:gui06        = "151515"
@@ -282,7 +283,7 @@ call <sid>hi("StartifySpecial",  s:gray, "", s:cterm03, "", "", "")
 
 " C++ extensions
 call <sid>hi("cppMemory",  s:texttertiary, "", s:cterm07, "", "none", "")
-call <sid>hi("cppAssert",  s:texttertiary, "", s:cterm07, "", "none", "")
+call <sid>hi("cppAssert",  s:darkgray, "", s:cterm07, "", "none", "")
 
 " nvim
 call <sid>hi("TabLineFill",  s:textsecondary, s:white, s:white, "", "none", "")

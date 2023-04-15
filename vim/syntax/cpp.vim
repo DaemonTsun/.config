@@ -28,7 +28,7 @@ syn keyword cppStructure	class typename template namespace
 syn keyword cppBoolean		true false
 syn keyword cppConstant		__cplusplus
 syn keyword cppMemory           init free open close
-syn keyword cppAssert           assert
+syn region  cppAssert           start=+\(static_\)\?assert(+ end=+)\s*;+
 
 " C++ 11 extensions
 if !exists("cpp_no_cpp11")
