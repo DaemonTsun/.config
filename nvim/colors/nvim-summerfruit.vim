@@ -3,18 +3,19 @@
 " GUI color definitions
 let s:brightpink   = "FFE7FF"
 let s:blue		   = "0000FF"
-let s:highlightblue	   = "E0E0FF"
+let s:highlightblue	= "E0E0FF"
 let s:lightestgray = "EEEEEE"
 let s:white        = "FFFFFF"
 let s:lightergray  = "E0E0E0"
 let s:lightgray    = "D0D0D0"
 let s:gray         = "B0B0B0"
 let s:black        = "000000"
-let s:textblack        = "101010"
+let s:textblack    = "101010"
 let s:gui06        = "151515"
-let s:textsecondary        = "202020"
+let s:textsecondary = "202020"
+let s:texttertiary = "707070"
 let s:gui08        = "FF0086"
-let s:orange        = "FD8900"
+let s:orange       = "FD8900"
 let s:mustard      = "ABA800"
 let s:gui0B        = "00C918"
 let s:gui0C        = "1FAAAA"
@@ -278,6 +279,10 @@ call <sid>hi("StartifySection",  s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("StartifySelect",   s:gui0C, "", s:cterm0C, "", "", "")
 call <sid>hi("StartifySlash",    s:gray, "", s:cterm03, "", "", "")
 call <sid>hi("StartifySpecial",  s:gray, "", s:cterm03, "", "", "")
+
+" C++ extensions
+call <sid>hi("cppMemory",  s:texttertiary, "", s:cterm07, "", "none", "")
+call <sid>hi("cppAssert",  s:texttertiary, "", s:cterm07, "", "none", "")
 
 " nvim
 call <sid>hi("TabLineFill",  s:textsecondary, s:white, s:white, "", "none", "")
