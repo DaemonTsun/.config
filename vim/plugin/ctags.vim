@@ -51,12 +51,21 @@ endfunction
 
 function! GoToDefinitionOfCurrentWord(...)
     let current_word = expand("<cword>")
-    let show_list = get(a:, 0, 0)
-    let cmd=':tag ' . current_word
+    let tab = get(a:, 0, 0)
+    let select = get(a:, 1, 0)
+    let cmd=':'
 
-    if show_list
-        let cmd=':tselect ' . current_word
+    if tab
+        let cmd='tab '
     endif
+
+    if select
+        let cmd=cmd . 'tselect '
+    else
+        let cmd=cmd . 'tag '
+    endif
+
+    let cmd=cmd . current_word
 
     try
         execute cmd

@@ -40,16 +40,21 @@ command! -nargs=* -complete=file Sp :tabnew <args>
 nmap <F1> <nop>
 imap <F1> <nop>
 nnoremap <F3> :call GoToDefinitionOfCurrentWord()<cr>zz
-nnoremap <S-F3> :call GoToDefinitionOfCurrentWord(1)<cr>zz
+nnoremap <C-F3> :call GoToDefinitionOfCurrentWord(1, 0)<cr>zz
+nnoremap <S-F3> :call GoToDefinitionOfCurrentWord(0, 1)<cr>zz
+nnoremap <C-S-F3> :call GoToDefinitionOfCurrentWord(1, 1)<cr>zz
+nnoremap <F4> :call SourceHeaderSwap()<cr>
+nnoremap <S-F4> :call SourceHeaderSwap(1)<cr>
 nnoremap <F5> :make!<cr>
 nnoremap <F6> :!make run<cr>
 
-nnoremap <F4> :call SourceHeaderSwap()<cr>
-nnoremap <S-F4> :call SourceHeaderSwap(1)<cr>
 nnoremap <silent> z. :<C-u>normal! zszH<cr>
 
 nnoremap <C-t> :tabnew<cr>
 inoremap <C-t> <ESC>:tabnew<cr>
+
+" ctrl+r replace all from visual
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 nnoremap <S-Up> <nop>
 nnoremap <S-Down> <nop>
