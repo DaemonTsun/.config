@@ -1,3 +1,4 @@
+
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vim/vimrc
@@ -22,5 +23,10 @@ inoremap <A-7> <ESC>7gt
 inoremap <A-8> <ESC>8gt
 inoremap <A-9> <ESC>9gt
 
-nnoremap <C-w> :q<CR>
-inoremap <C-w> <ESC>:q<CR>
+" whoops this doesnt make sense: nnoremap <C-w> :q<CR>
+" inoremap <C-w> <ESC>:q<CR>
+
+" sessions
+set sessionoptions=blank,buffers,folds,globals,localoptions,options,resize,tabpages,winpos,winsize
+autocmd UIEnter  * :call TryLoadCurrentSession()
+autocmd VimLeave * :call SaveCurrentSession()
